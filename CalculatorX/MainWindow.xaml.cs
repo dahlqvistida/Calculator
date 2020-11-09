@@ -24,5 +24,15 @@ namespace CalculatorX
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (e.Source is Button button)
+            {
+                MyTextBlock.Text += button.Content;
+            }
+
+        }
     }
 }

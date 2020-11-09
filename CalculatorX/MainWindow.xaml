@@ -5,8 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalculatorX"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="CALCULATOR" Height="500" Width="400">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition />
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions> 
+        <TextBlock Name="MyTextBlock" Grid.Column="1" Grid.ColumnSpan="4" FontSize="15" Margin="0, 30, 0, 30" Background="LightGray"/>
+        <Button Name="ButtonClear" Content="C" Grid.Row="0" Grid.Column="5" Margin="0, 30, 0, 30" BorderBrush="Transparent"/>
+
+        <Button Click="Button_Click" Name="ButtonSeven" Content="7" Grid.Row="1" Grid.Column="1" FontSize="20" BorderBrush="Transparent"/>
+        <Button Click="Button_Click" Name="ButtonEight" Content="8" Grid.Row="1" Grid.Column="2" FontSize="20" BorderBrush="Transparent"/>
+        <Button Click="Button_Click" Name="ButtonNine" Content="9" Grid.Row="1" Grid.Column="3" FontSize="20" BorderBrush="Transparent"/>
+        <Button Click="Button_Click" Name="ButtonFour" Content="4" Grid.Row="2" Grid.Column="1" FontSize="20" BorderBrush="Transparent"/>
+        <Button Click="Button_Click" Name="ButtonFive" Content="5" Grid.Row="2" Grid.Column="2" FontSize="20" BorderBrush="Transparent"/>
+        <Button Click="Button_Click" Name="ButtonSix" Content="6" Grid.Row="2" Grid.Column="3" FontSize="20" BorderBrush="Transparent"/>
+        <Button Click="Button_Click" Name="ButtonOne" Content="1" Grid.Row="3" Grid.Column="1" FontSize="20" BorderBrush="Transparent"/>
+        <Button Click="Button_Click" Name="ButtonTwo" Content="2" Grid.Row="3" Grid.Column="2" FontSize="20" BorderBrush="Transparent"/>
+        <Button Click="Button_Click" Name="ButtonThree" Content="3" Grid.Row="3" Grid.Column="3" FontSize="20" BorderBrush="Transparent"/>
+        <Button Click="Button_Click" Name="ButtonZero" Content="0" Grid.Row="4" Grid.Column="1" FontSize="20" BorderBrush="Transparent"/>
+
+        <Button Name="ButtonDot" Content="." Grid.Row="4" Grid.Column="2" FontSize="20" BorderBrush="Transparent"/>
+        <Button Name="ButtonPlusMinus" Content="+/-" Grid.Row="4" Grid.Column="3" FontSize="20" BorderBrush="Transparent"/>
+
+        <Button Name="ButtonProcent" Content="%" Grid.Row="1" Grid.Column="4" FontSize="20" Margin="10, 0, 0, 0" BorderBrush="Transparent"/>
+        <Button Click="Button_Click" Name="ButtonMultiply" Content="x" Grid.Row="2" Grid.Column="4" FontSize="20" Margin="10, 0, 0, 0" BorderBrush="Transparent"/>
+        <Button Click="Button_Click" Name="ButtonPlus" Content="+" Grid.Row="3" Grid.Column="4" Grid.RowSpan="2" FontSize="20" Margin="10, 0, 0, 0" BorderBrush="Transparent"/>
+
+        <Button Name="ButtonSquareR" Content="√" Grid.Row="1" Grid.Column="5" FontSize="20" BorderBrush="Transparent"/>
+        <Button Click="Button_Click" Name="ButtonDivision" Content="/" Grid.Row="2" Grid.Column="5" FontSize="20" BorderBrush="Transparent"/>
+        <Button Click="Button_Click" Name="ButtonMinus" Content="-" Grid.Row="3" Grid.Column="5" FontSize="20" BorderBrush="Transparent"/>
+        <Button Name="ButtonEquals" Content="=" Grid.Row="4" Grid.Column="5" FontSize="20" BorderBrush="Transparent" Background="LightSeaGreen"/>
+
+
+
 
     </Grid>
 </Window>
