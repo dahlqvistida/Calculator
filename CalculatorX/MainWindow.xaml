@@ -42,13 +42,13 @@
         <Button Name="ButtonPlusMinus" Content="+/-" Grid.Row="4" Grid.Column="3" FontSize="20" BorderBrush="Transparent"/>
 
         <Button Name="ButtonProcent" Content="%" Grid.Row="1" Grid.Column="4" FontSize="20" Margin="10, 0, 0, 0" BorderBrush="Transparent"/>
-        <Button Click="Button_Click" Name="ButtonMultiply" Content="x" Grid.Row="2" Grid.Column="4" FontSize="20" Margin="10, 0, 0, 0" BorderBrush="Transparent"/>
-        <Button Click="Button_Click" Name="ButtonPlus" Content="+" Grid.Row="3" Grid.Column="4" Grid.RowSpan="2" FontSize="20" Margin="10, 0, 0, 0" BorderBrush="Transparent"/>
+        <Button Click="ButtonOp_Click" Name="ButtonMultiply" Content="x" Grid.Row="2" Grid.Column="4" FontSize="20" Margin="10, 0, 0, 0" BorderBrush="Transparent"/>
+        <Button Click="ButtonOp_Click" Name="ButtonPlus" Content="+" Grid.Row="3" Grid.Column="4" Grid.RowSpan="2" FontSize="20" Margin="10, 0, 0, 0" BorderBrush="Transparent"/>
 
         <Button Name="ButtonSquareR" Content="√" Grid.Row="1" Grid.Column="5" FontSize="20" BorderBrush="Transparent"/>
-        <Button Click="Button_Click" Name="ButtonDivision" Content="/" Grid.Row="2" Grid.Column="5" FontSize="20" BorderBrush="Transparent"/>
-        <Button Click="Button_Click" Name="ButtonMinus" Content="-" Grid.Row="3" Grid.Column="5" FontSize="20" BorderBrush="Transparent"/>
-        <Button Name="ButtonEquals" Content="=" Grid.Row="4" Grid.Column="5" FontSize="20" BorderBrush="Transparent" Background="LightSeaGreen"/>
+        <Button Click="ButtonOp_Click" Name="ButtonDivision" Content="/" Grid.Row="2" Grid.Column="5" FontSize="20" BorderBrush="Transparent"/>
+        <Button Click="ButtonOp_Click" Name="ButtonMinus" Content="-" Grid.Row="3" Grid.Column="5" FontSize="20" BorderBrush="Transparent"/>
+        <Button Click="ButtonEquals_Click" Name="ButtonEquals" Content="=" Grid.Row="4" Grid.Column="5" FontSize="20" BorderBrush="Transparent" Background="LightSeaGreen"/>
 
 
 

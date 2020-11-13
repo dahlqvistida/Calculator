@@ -20,19 +20,92 @@ namespace CalculatorX
     /// </summary>
     public partial class MainWindow : Window
     {
+
+
+        double numberRow1 = 0;
+        double numberRow2 = 0;
+        double computation = 0;
+        string operation = "";
+
+        double click;
+
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
+            if(operation == "")
+            {
+                if (e.Source is Button button)
+                {
+                    MyTextBlock.Text += button.Content;
+                    click = Convert.ToInt32(button.Content);
+                }
+                numberRow1 = (numberRow1) + click;
+            }
+            else
+            {
+                if (e.Source is Button button)
+                {
+                    MyTextBlock.Text += button.Content;
+                    click = Convert.ToInt32(button.Content);
+                }
+                numberRow1 = (numberRow1) + click;
+            }
+            
 
+        }
+
+        private void ButtonOp_Click(object sender, RoutedEventArgs e)
+        {
             if (e.Source is Button button)
             {
                 MyTextBlock.Text += button.Content;
+                
+                if (button.Content == "+")
+                {
+                    computation = numberRow1 + numberRow2;
+                }
+                else if (button.Content == "-")
+                {
+                    computation = numberRow1 - numberRow2;
+                }
+            }
+        }
+        private void ButtonEquals_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (e.Source is Button button)
+            {
+
+                if (operation == (numberRow1 + "+" + numberRow2))
+            {
+                MyTextBlock.Text = (numberRow1 + numberRow2).ToString();
+
+            }
+            else if (operation == "-")
+            {
+                MyTextBlock.Text = (numberRow1 + numberRow2).ToString();
+
+            }
+            else if (operation == "/")
+            {
+                MyTextBlock.Text = (numberRow1 / numberRow2).ToString();
+            }
+            else if (operation == "x")
+            {
+                MyTextBlock.Text = (numberRow1 * numberRow2).ToString();
             }
 
+            }
+            
+      
         }
+
+        
     }
 }
