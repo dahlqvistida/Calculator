@@ -22,12 +22,15 @@ namespace CalculatorX
     {
 
 
-        double numberRow1 = 0;
-        double numberRow2 = 0;
-        double computation = 0;
-        string operation = "";
+        double _numberRow1 = 0;
+        double _numberRow2 = 0;
+        
+        double _answer = 0;
 
-        double click;
+        string[] _numbers;
+
+        public string operation;
+
 
         public MainWindow()
         {
@@ -35,77 +38,69 @@ namespace CalculatorX
 
         }
 
+        // Writing numbers
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-            if(operation == "")
+
+            if (e.Source is Button button)
             {
-                if (e.Source is Button button)
-                {
-                    MyTextBlock.Text += button.Content;
-                    click = Convert.ToInt32(button.Content);
-                }
-                numberRow1 = (numberRow1) + click;
+                MyTextBlock.Text += button.Content;
+
             }
-            else
-            {
-                if (e.Source is Button button)
-                {
-                    MyTextBlock.Text += button.Content;
-                    click = Convert.ToInt32(button.Content);
-                }
-                numberRow1 = (numberRow1) + click;
-            }
-            
 
         }
 
+        // Setting operation
         private void ButtonOp_Click(object sender, RoutedEventArgs e)
         {
             if (e.Source is Button button)
             {
                 MyTextBlock.Text += button.Content;
-                
-                if (button.Content == "+")
-                {
-                    computation = numberRow1 + numberRow2;
-                }
-                else if (button.Content == "-")
-                {
-                    computation = numberRow1 - numberRow2;
-                }
+
+                operation += button.Content;
             }
+
         }
+
+        // Counting the result
         private void ButtonEquals_Click(object sender, RoutedEventArgs e)
         {
-
-            if (e.Source is Button button)
-            {
-
-                if (operation == (numberRow1 + "+" + numberRow2))
-            {
-                MyTextBlock.Text = (numberRow1 + numberRow2).ToString();
-
-            }
-            else if (operation == "-")
-            {
-                MyTextBlock.Text = (numberRow1 + numberRow2).ToString();
-
-            }
-            else if (operation == "/")
-            {
-                MyTextBlock.Text = (numberRow1 / numberRow2).ToString();
-            }
-            else if (operation == "x")
-            {
-                MyTextBlock.Text = (numberRow1 * numberRow2).ToString();
-            }
-
-            }
             
-      
+            _numbers = MyTextBlock.Text.Split(operation);
+
+                _numberRow1 = Convert.ToDouble(_numbers[0]);
+                _numberRow2 = Convert.ToDouble(_numbers[1]);
+
+            if (MyTextBlock.Text.Contains("+"))
+            {
+                _answer = _numberRow1 + _numberRow2;
+
+            }
+            else if (MyTextBlock.Text.Contains("-"))
+            {
+                _answer = _numberRow1 - _numberRow2;
+
+            }
+            else if (MyTextBlock.Text.Contains("/"))
+            {
+                _answer = _numberRow1 / _numberRow2;
+            }
+            else if (MyTextBlock.Text.Contains("x"))
+            {
+                _answer = _numberRow1 * _numberRow2;
+            }
+
+            MyTextBlock.Text = _answer.ToString();
+
+            operation = "";
         }
 
-        
+        // Clear the text block
+        private void ButtonClear_Click(object sender, RoutedEventArgs e)
+        {
+
+            MyTextBlock.Text = String.Empty;
+
+        }
     }
 }
