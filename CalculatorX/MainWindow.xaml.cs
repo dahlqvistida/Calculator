@@ -24,8 +24,11 @@ namespace CalculatorX
 
         double _numberRow1 = 0;
         double _numberRow2 = 0;
-        
+
+        double _procent = 0;
+
         double _answer = 0;
+        
 
         string[] _numbers;
 
@@ -88,6 +91,21 @@ namespace CalculatorX
             else if (MyTextBlock.Text.Contains("x"))
             {
                 _answer = _numberRow1 * _numberRow2;
+            }
+            // This doesn't work because % isnt a double, and i dont know how to change that
+            else if (MyTextBlock.Text.Contains("%"))
+            {
+                _procent = (_numberRow2 / _numberRow1) * 100;
+
+                if (MyTextBlock.Text.Contains("+"))
+                {
+                    _answer = _numberRow1 + _procent;
+                }
+                else if (MyTextBlock.Text.Contains("-"))
+                {
+                    _answer = _numberRow1 + _procent;
+                }
+
             }
 
             MyTextBlock.Text = _answer.ToString();

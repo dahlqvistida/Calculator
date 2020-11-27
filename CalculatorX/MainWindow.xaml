@@ -39,10 +39,10 @@
         <Button Click="Button_Click" Name="ButtonThree" Content="3" Grid.Row="3" Grid.Column="3" FontSize="20" BorderBrush="Transparent"/>
         <Button Click="Button_Click" Name="ButtonZero" Content="0" Grid.Row="4" Grid.Column="1" FontSize="20" BorderBrush="Transparent"/>
 
-        <Button Name="ButtonDot" Content="." Grid.Row="4" Grid.Column="2" FontSize="20" BorderBrush="Transparent"/>
+        <Button Click="Button_Click" Name="ButtonDot" Content="," Grid.Row="4" Grid.Column="2" FontSize="20" BorderBrush="Transparent"/>
         <Button Name="ButtonPlusMinus" Content="+/-" Grid.Row="4" Grid.Column="3" FontSize="20" BorderBrush="Transparent"/>
 
-        <Button Name="ButtonProcent" Content="%" Grid.Row="1" Grid.Column="4" FontSize="20" Margin="10, 0, 0, 0" BorderBrush="Transparent"/>
+        <Button Click="Button_Click" Name="ButtonProcent" Content="%" Grid.Row="1" Grid.Column="4" FontSize="20" Margin="10, 0, 0, 0" BorderBrush="Transparent"/>
         <Button Name="ButtonSquareR" Content="√" Grid.Row="1" Grid.Column="5" FontSize="20" BorderBrush="Transparent"/>
 
         <Button Click="ButtonOp_Click" Name="ButtonMultiply" Content="x" Grid.Row="2" Grid.Column="4" FontSize="20" Margin="10, 0, 0, 0" BorderBrush="Transparent"/>
